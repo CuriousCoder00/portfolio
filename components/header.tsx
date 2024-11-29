@@ -20,6 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-end gap-3">
           {socialData.map((social) => (
             <Link
+              target="_blank"
               className="scale-95 hover:scale-105 transition-transform duration-200"
               href={social.link}
               key={social.name}
