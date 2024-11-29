@@ -1,5 +1,5 @@
 "use client";
-import { MoonStar, SunIcon } from "lucide-react";
+import { MoonStarIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 
@@ -13,7 +13,7 @@ export const ThemeToggler = () => {
           className="border rounded-lg hover:bg-slate-500/30"
           onClick={() => setTheme("light")}
         >
-          <SunIcon />
+          <Sun />
         </Button>
       ) : (
         <Button
@@ -21,7 +21,7 @@ export const ThemeToggler = () => {
           className="border rounded-lg hover:bg-slate-500/30"
           onClick={() => setTheme("dark")}
         >
-          <MoonStar />
+          <MoonStarIcon />
         </Button>
       )}
     </>

@@ -4,16 +4,18 @@ import PFP from "./img.jpg";
 
 export const Logo = () => {
   return (
-    <Image
-      className="dark:invert invert-0"
-      src={IMG}
-      alt="Logo"
-      width={40}
-      height={40}
-    />
+    <div className="flex items-center justify-center ">
+      <Image
+        className="dark:invert brightness-200 contrast-200"
+        src={IMG}
+        alt="Logo"
+        width={40}
+        height={40}
+      />
+    </div>
   );
 };
 
 export const Img = () => {
-  return <Image className="" src={PFP} alt="pfp" width={120} height={120} />;
+  return <Image className="invert saturate-200 contrast-200" src={PFP} alt="pfp" width={120} height={120} />;
 };
