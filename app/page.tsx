@@ -11,7 +11,7 @@ export default function Home() {
       <Profile />
       <Skills />
       <Projects />
-      <div className="fixed inset-0">
+      <div className="fixed inset-0 -z-10">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
