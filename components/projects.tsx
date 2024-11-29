@@ -15,6 +15,15 @@ const Projects = () => {
           <ProjectCard project={project} key={idx} />
         ))}
       </div>
+      <div className="flex w-full items-center justify-end gap-3">
+        You can find more projects on
+        <Link
+          className="flex items-center justify-end gap-3 hover:underline text-sky-500"
+          href="https://github.com/curiouscoder00?tab=repositories"
+        >
+          My Github <SquareArrowOutUpRight size={18} />
+        </Link>
+      </div>
     </div>
   );
 };
@@ -31,6 +40,7 @@ const ProjectCard = ({
     repo: string;
     image: StaticImageData;
     tech: string[];
+    currentlyWorking?: boolean;
   };
 }) => {
   return (
@@ -45,14 +55,18 @@ const ProjectCard = ({
           <h3 className="font-bold text-base mt-5 text-start">
             {project.name}
           </h3>
-          <div className="flex items-center justify-end gap-4">
-            <Link href={project.link}>
-              <SquareArrowOutUpRight size={18} />
-            </Link>
-            <Link href={project.repo}>
-              <DiGithubBadge size={25} />
-            </Link>
-          </div>
+          {project.currentlyWorking ? (
+            <Badge>Work in progress..</Badge>
+          ) : (
+            <div className="flex items-center justify-end gap-4">
+              <Link href={project.link}>
+                <SquareArrowOutUpRight size={18} />
+              </Link>
+              <Link href={project.repo}>
+                <DiGithubBadge size={25} />
+              </Link>
+            </div>
+          )}
         </div>
         <p className="opacity-80 text-sm">{project.desc}</p>
         <div className="flex items-center justify-start gap-3 w-full flex-wrap my-3">

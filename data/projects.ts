@@ -1,6 +1,7 @@
 import PERCEPTUI from "../assets/perceptui.png";
 import BRAINLY from "../assets/brainly.png";
 import SAFECRYPT from "../assets/safecrypt.png";
+import GRIDCONNECT from "../assets/gridc.png";
 
 export const projectData = [
   {
@@ -43,5 +44,22 @@ export const projectData = [
     repo: "https://github.com/CuriousCoder00/safecryptsol",
     image: SAFECRYPT,
     tech: ["nextjs", "next-auth", "tailwindcss", "shadcn", "solana"],
+  },
+  {
+    currentlyWorking: true,
+    name: "Grid Connect",
+    desc: "A web based community app where like-minded people gather and explore diverse communities tailored to various categories.",
+    link: "https://grid-connect.vercel.app/",
+    repo: "https://github.com/CuriousCoder00/grid-connect",
+    image: GRIDCONNECT,
+    tech: [
+      "nextjs",
+      "next-auth",
+      "tailwindcss",
+      "shadcn",
+      "prisma",
+      "supabase",
+      "postgres",
+    ],
   },
 ];

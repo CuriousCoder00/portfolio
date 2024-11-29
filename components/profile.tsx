@@ -8,7 +8,7 @@ const Profile = () => {
       <div className="flex items-center justify-end w-full my-3">
         <Link
           className="text-xs flex items-center gap-2 justify-center"
-          href={"/"}
+          href={"mailto:kapiljangid040@gmail.com"}
         >
           <span className="w-2 h-2 dark:bg-green-600 bg-green-800 rounded-full animate-pulse"></span>
           Available now
@@ -30,8 +30,14 @@ const Profile = () => {
         <div className="flex flex-col items-start justify-start sm:pr-6 relative">
           <h1 className="font-bold text-xl">Hi, I am Kapil Kumar Jangid</h1>
           <p className="font-thin dark:text-zinc-300 text-sm">
-            a full stack developer, specializing in UI design and creating
-            engaging user experiences with a strong attention to details.
+            <span className="font-bold text-sky-700 dark:text-sky-400">
+              Open source contributor
+            </span>{" "}
+            and a{" "}
+            <span className="font-bold text-sky-700 dark:text-sky-400">
+              full stack developer
+            </span>
+            , specializing in UI design and creating engaging user experiences.
           </p>
           <p className="mt-3 font-thin dark:text-zinc-300 text-sm">
             Rajasthan, India
