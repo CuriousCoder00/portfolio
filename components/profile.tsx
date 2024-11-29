@@ -5,7 +5,7 @@ import React from "react";
 const Profile = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex items-center justify-end w-full">
+      <div className="flex items-center justify-end w-full my-3">
         <Link
           className="text-xs flex items-center gap-2 justify-center"
           href={"/"}
@@ -27,7 +27,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-start justify-start pr-6">
+        <div className="flex flex-col items-start justify-start sm:pr-6 relative">
           <h1 className="font-bold text-xl">Hi, I am Kapil Kumar Jangid</h1>
           <p className="font-thin dark:text-zinc-300 text-sm">
             a full stack developer, specializing in UI design and creating
@@ -36,6 +36,10 @@ const Profile = () => {
           <p className="mt-3 font-thin dark:text-zinc-300 text-sm">
             Rajasthan, India
           </p>
+          <span
+            className="absolute inset-0 animate-glow bg-gradient-to-r from-blue-500/60 to-pink-500/60 blur-2xl"
+            aria-hidden="true"
+          ></span>
         </div>
       </div>
     </div>
