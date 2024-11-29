@@ -59,10 +59,10 @@ const ProjectCard = ({
             <Badge>Work in progress..</Badge>
           ) : (
             <div className="flex items-center justify-end gap-4">
-              <Link href={project.link}>
+              <Link href={project.link} target="_blank">
                 <SquareArrowOutUpRight size={18} />
               </Link>
-              <Link href={project.repo}>
+              <Link href={project.repo} target="_blank">
                 <DiGithubBadge size={25} />
               </Link>
             </div>
