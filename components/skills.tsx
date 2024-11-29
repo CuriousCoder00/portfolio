@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { skillData } from "@/data/skills";
 import { MagicCard } from "./ui/magic-card";
 

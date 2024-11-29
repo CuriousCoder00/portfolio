@@ -1,4 +1,4 @@
-import { Logo, Logo2 } from "@/assets";
+import { Logo } from "@/assets";
 import Link from "next/link";
 import React from "react";
 import { ThemeToggler } from "./theme-toggler";
