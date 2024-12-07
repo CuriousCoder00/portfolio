@@ -8,11 +8,11 @@ const Profile = () => {
     <div className="flex flex-col w-full">
       <div className="flex items-center justify-end w-full my-3">
         <Link
-          className="text-xs flex items-center gap-2 justify-center"
+          className="text-xs flex items-center gap-2 justify-center border p-1 rounded-xl px-5 dark:bg-black dark:hover:bg-slate-950 hover:bg-slate-100"
           href={"mailto:kapiljangid040@gmail.com"}
         >
           <span className="w-2 h-2 dark:bg-green-600 bg-green-800 rounded-full animate-pulse"></span>
-          Available now
+          Contact Me
         </Link>
       </div>
       <div className="flex items-center justify-start gap-4">

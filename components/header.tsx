@@ -1,10 +1,18 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { ThemeToggler } from "./theme-toggler";
 import { socialData } from "@/data/socials";
 import IMG from "../assets/logo.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { BiArrowBack } from "react-icons/bi";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { contributionsTab } from "@/store/atoms/contributions";
 const Header = () => {
+  const path = usePathname();
+  const tab = useRecoilValue(contributionsTab);
+  const setTab = useSetRecoilState(contributionsTab);
   return (
     <header className="fixed top-3 z-50 w-full md:max-w-[700px] mx-auto px-2">
       <nav className="flex items-center justify-between p-2 rounded-xl px-4 shadow-inner shadow-zinc-500 border-b backdrop-blur-xl">
@@ -18,6 +26,25 @@ const Header = () => {
           />
         </Link>
         <div className="flex items-center justify-end gap-3">
+          {path === "/contributions" ? (
+            <Link
+              prefetch
+              href={"/"}
+              className="flex items-center justify-center scale-95 gap-2 hover:scale-105 transition-transform duration-200 text-sm"
+            >
+              <BiArrowBack />
+              Go Back
+            </Link>
+          ) : (
+            <Link
+              prefetch
+              href={"/contributions"}
+              className="flex flex-col items-center justify-center scale-95 hover:scale-105 transition-transform duration-200"
+            >
+              <span className="text-sm">Open Source</span>
+              <span className="text-xs text-slate-600">Contributions</span>
+            </Link>
+          )}
           {socialData.map((social) => (
             <Link
               target="_blank"
@@ -31,6 +58,9 @@ const Header = () => {
           <ThemeToggler />
         </div>
       </nav>
+      {path === "/contributions" && (
+        <div className="flex items-center justify-start gap-3"></div>
+      )}
     </header>
   );
 };

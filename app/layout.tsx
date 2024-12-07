@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Provider from "./provider";
+import Header from "@/components/header";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +31,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Provider>{children}</Provider>
+        <Provider>
+          <main className="min-h-dvh md:max-w-[700px] mx-auto w-full flex flex-col items-center justify-start overflow-hidden rounded-md px-4">
+            <Header />
+            {children}
+            <div className="fixed inset-0 -z-10">
+              <SparklesCore
+                id="tsparticlesfullpage"
+                background="transparent"
+                minSize={0.6}
+                maxSize={1.4}
+                particleDensity={40}
+                className="w-full h-full"
+                particleColor="#FFFFFF"
+              />
+            </div>
+          </main>
+        </Provider>
       </body>
     </html>
   );
