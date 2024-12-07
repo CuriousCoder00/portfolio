@@ -25,7 +25,7 @@ const OpenSource = () => {
           ))}
         </div>
       )}
-      {tab === "Issues" && (
+      {tab === "issues" && (
         <div className="flex flex-col items-start justify-start gap-5">
           {issues.map((issue, idx) => (
             <IssueCard key={idx} issue={issue} />
