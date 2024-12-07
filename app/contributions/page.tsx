@@ -17,7 +17,7 @@ const OpenSource = () => {
     return type === "pull";
   });
   return (
-    <div className="mx-auto w-full flex gap-3 items-start justify-start pt-36 px-2">
+    <div className="mx-auto w-full flex gap-3 items-start justify-start pt-36 px-2 pb-12">
       {tab === "Issues" && (
         <div className="flex flex-col items-start justify-start gap-5">
           {issues.map((issue, idx) => (
