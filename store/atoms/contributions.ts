@@ -7,7 +7,7 @@ export const issues = atom({
 
 export const contributionsTab = atom({
     key: "opensourceTab",
-    default: "Issues"
+    default: "pulls"
 })
 
-export const tabs = ["Issues", "Pulls"]
+export const tabs = [{ label: "Pull Requests", mode: "pulls" }, { label: "Issues", mode: "issues" }]

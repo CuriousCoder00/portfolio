@@ -66,14 +66,14 @@ const Header = () => {
             {tabs.map((t, idx) => (
               <Button
                 className={`rounded-none ${
-                  t === tab
+                  tab === t.mode
                     ? ""
                     : "dark:bg-slate-400 dark:hover:bg-slate-200 bg-zinc-600"
                 }`}
                 key={idx}
-                onClick={() => setTab(t)}
+                onClick={() => setTab(t.mode)}
               >
-                {t}
+                {t.label}
               </Button>
             ))}
           </div>

@@ -18,16 +18,16 @@ const OpenSource = () => {
   });
   return (
     <div className="mx-auto w-full flex gap-3 items-start justify-start pt-36 px-2 pb-12">
-      {tab === "Issues" && (
+      {tab === "pulls" && (
         <div className="flex flex-col items-start justify-start gap-5">
-          {issues.map((issue, idx) => (
+          {pulls.map((issue, idx) => (
             <IssueCard key={idx} issue={issue} />
           ))}
         </div>
       )}
-      {tab === "Pulls" && (
+      {tab === "Issues" && (
         <div className="flex flex-col items-start justify-start gap-5">
-          {pulls.map((issue, idx) => (
+          {issues.map((issue, idx) => (
             <IssueCard key={idx} issue={issue} />
           ))}
         </div>
