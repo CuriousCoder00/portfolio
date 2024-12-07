@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { projectData } from "@/data/projects";
 import Image, { StaticImageData } from "next/image";
@@ -5,6 +6,8 @@ import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { DiGithubBadge } from "react-icons/di";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { useRecoilValue } from "recoil";
+import { themeState } from "@/store/atoms/theme";
 
 const Projects = () => {
   return (
@@ -38,18 +41,29 @@ const ProjectCard = ({
     desc: string;
     link: string;
     repo: string;
-    image: StaticImageData;
+    imageDark: StaticImageData;
+    imageLight: StaticImageData;
     tech: string[];
     currentlyWorking?: boolean;
   };
 }) => {
+  const theme = useRecoilValue(themeState);
   return (
     <div className="flex flex-col col-span-1 overflow-hidden rounded-xl border w-full backdrop-blur-xl">
-      <Image
-        src={project.image}
-        alt={project.name}
-        className="hover:scale-105 transition-transform duration-500 delay-300 w-full aspect-video h-auto"
-      />
+      {theme === "dark" ? (
+        <Image
+          src={project.imageDark}
+          alt={project.name}
+          className="hover:scale-105 transition-transform duration-500 delay-300 w-full aspect-video h-auto"
+        />
+      ) : (
+        <Image
+          src={project.imageLight}
+          alt={project.name}
+          className="hover:scale-105 transition-transform duration-500 delay-300 w-full aspect-video h-auto"
+        />
+      )}
+
       <div className="flex flex-col items-start justify-start text-start px-4 gap-2 w-full">
         <div className="flex items-center justify-between w-full">
           <h3 className="font-bold text-base mt-5 text-start">

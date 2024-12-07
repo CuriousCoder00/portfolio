@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-
-import PFP from "../assets/img.jpg";
+import { profileData as p } from "@/data/profile";
 
 const Profile = () => {
   return (
@@ -25,7 +24,7 @@ const Profile = () => {
                 <div className="flex items-center justify-center w-28 h-28 rounded-full overflow-hidden object-cover">
                   <Image
                     className="saturate-150 contrast-125"
-                    src={PFP}
+                    src={p.image}
                     alt="pfp"
                     width={120}
                     height={120}
@@ -36,19 +35,20 @@ const Profile = () => {
           </div>
         </div>
         <div className="flex flex-col items-start justify-start sm:pr-6 relative">
-          <h1 className="font-bold text-xl">Hi, I am Kapil Kumar Jangid</h1>
+          <h1 className="font-bold text-xl">Hi, I am {p.name}</h1>
           <p className="font-thin dark:text-zinc-300 text-sm">
-            <span className="font-bold text-sky-700 dark:text-sky-400">
-              Open source contributor
-            </span>{" "}
-            and a{" "}
-            <span className="font-bold text-sky-700 dark:text-sky-400">
-              full stack developer
-            </span>
-            , specializing in UI design and creating engaging user experiences.
+            {p.roles.map((role, idx) => (
+              <span key={idx}>
+                <span className="font-bold text-sky-700 dark:text-sky-400">
+                  {role}
+                </span>
+                {idx === p.roles.length - 1 ? "" : " and a "}
+              </span>
+            ))}
+            , {p.description}
           </p>
           <p className="mt-3 font-thin dark:text-zinc-300 text-sm">
-            Rajasthan, India
+            {p.location}
           </p>
           <span
             className="absolute inset-0 animate-glow bg-gradient-to-r from-blue-500/60 to-pink-500/60 blur-2xl"
