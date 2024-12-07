@@ -1,8 +1,13 @@
 import { atom } from "recoil";
 
-export const contributionsTab = atom({
-    key: "opensourceTab",
-    default: "issues"
+export const issues = atom({
+    key: "issues",
+    default: {}
 })
 
-export const tabs = ["issues", "pulls"]
+export const contributionsTab = atom({
+    key: "opensourceTab",
+    default: "Issues"
+})
+
+export const tabs = ["Issues", "Pulls"]

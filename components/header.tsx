@@ -8,14 +8,15 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BiArrowBack } from "react-icons/bi";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { contributionsTab } from "@/store/atoms/contributions";
+import { contributionsTab, tabs } from "@/store/atoms/contributions";
+import { Button } from "./ui/button";
 const Header = () => {
   const path = usePathname();
   const tab = useRecoilValue(contributionsTab);
   const setTab = useSetRecoilState(contributionsTab);
   return (
     <header className="fixed top-3 z-50 w-full md:max-w-[700px] mx-auto px-2">
-      <nav className="flex items-center justify-between p-2 rounded-xl px-4 shadow-inner shadow-zinc-500 border-b backdrop-blur-xl">
+      <nav className="flex items-center justify-between p-2 rounded-t-xl px-4 shadow-inner shadow-zinc-500 border-b backdrop-blur-xl">
         <Link href={"/"}>
           <Image
             className="dark:invert rounded-full"
@@ -59,7 +60,24 @@ const Header = () => {
         </div>
       </nav>
       {path === "/contributions" && (
-        <div className="flex items-center justify-start gap-3"></div>
+        <div className="flex items-center justify-between bg-white dark:bg-black w-full rounded-b-xl overflow-hidden shadow-md pl-3">
+          Recent Contributions
+          <div className="flex items-center justify-end">
+            {tabs.map((t, idx) => (
+              <Button
+                className={`rounded-none ${
+                  t === tab
+                    ? ""
+                    : "dark:bg-slate-400 dark:hover:bg-slate-200 bg-zinc-600"
+                }`}
+                key={idx}
+                onClick={() => setTab(t)}
+              >
+                {t}
+              </Button>
+            ))}
+          </div>
+        </div>
       )}
     </header>
   );
