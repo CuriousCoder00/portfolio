@@ -21,14 +21,14 @@ const OpenSource = () => {
       {tab === "Issues" && (
         <div className="flex flex-col items-start justify-start gap-5">
           {issues.map((issue, idx) => (
-            <IssueCard issue={issue} />
+            <IssueCard key={idx} issue={issue} />
           ))}
         </div>
       )}
       {tab === "Pulls" && (
         <div className="flex flex-col items-start justify-start gap-5">
           {pulls.map((issue, idx) => (
-            <IssueCard issue={issue} />
+            <IssueCard key={idx} issue={issue} />
           ))}
         </div>
       )}
