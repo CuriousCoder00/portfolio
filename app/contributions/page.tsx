@@ -1,6 +1,6 @@
 "use client";
 import IssueCard from "@/components/open-source/issue-card";
-import { data } from "@/data/opensource/data";
+import { data } from "@/data/opensource";
 import { contributionsTab } from "@/store/atoms/contributions";
 import { useRecoilValue } from "recoil";
 
