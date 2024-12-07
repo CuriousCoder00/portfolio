@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Labels } from "./labels";
 import { getTimeAgo } from "@/lib/utils";
 import { Reactions } from "./reactions";
+import Image from "next/image";
 
 interface IssueCardProps {
   issue: GithubIssueResponse;
@@ -16,11 +17,17 @@ const IssueCard = ({ issue }: IssueCardProps) => {
   const isMerged = issue.pull_request?.merged_at != null;
   return (
     <div className="flex items-start justify-start shadow-sm dark:bg-black/70 dark:shadow-slate-700 shadow-slate-300 w-full p-4 gap-2 border rounded-xl hover:dark:bg-zinc-950 hover:bg-slate-200 transition-all hover:scale-105 duration-300">
-      <Link href={issue.user.html_url} target="_blank" className="flex-shrink-0">
-        <img
+      <Link
+        href={issue.user.html_url}
+        target="_blank"
+        className="flex-shrink-0"
+      >
+        <Image
           src={issue.user.avatar_url}
           alt={`${issue.user.login}'s avatar`}
           className="w-12 h-12 rounded-full"
+          width={100}
+          height={100}
         />
       </Link>
       <div className="w-full text-wrap flex flex-col gap-2">
