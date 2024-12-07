@@ -57,7 +57,7 @@ const IssueCard = ({ issue }: IssueCardProps) => {
           <p className="text-slate-500">
             {issue.body.length > 200
               ? issue.body.slice(0, 200) + "..."
-              : issue.body.length < 40
+              : issue.body.length < 30
               ? null
               : issue.body}
           </p>
