@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import { profileData as p } from "@/data/profile";
 
 const Profile = () => {
