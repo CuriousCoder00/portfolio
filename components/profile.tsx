@@ -16,27 +16,9 @@ const Profile = () => {
         </Link>
       </div>
       <div className="flex items-center justify-start gap-4">
-        <div className="flex items-center justify-center ">
-          <div className="mx-auto flex w-full max-w-lg items-center justify-center">
-            <div className="relative z-10 flex w-full items-center overflow-hidden rounded-full border p-[3px]">
-              <div className="animate-rotate absolute inset-0 h-full w-full rounded-full dark:bg-[conic-gradient(#5cdcff_20deg,transparent_120deg)] bg-[conic-gradient(#ff16b1_20deg,transparent_120deg)] transition-colors delay-200"></div>
-              <div className="relative z-20 flex w-full rounded-full">
-                <div className="flex items-center justify-center w-28 h-28 rounded-full overflow-hidden object-cover">
-                  <Image
-                    className="saturate-150 contrast-125"
-                    src={p.image}
-                    alt="pfp"
-                    width={120}
-                    height={120}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="flex flex-col items-start justify-start sm:pr-6 relative">
-          <h1 className="font-bold text-xl">Hi, I am {p.name}</h1>
-          <p className="font-thin dark:text-zinc-300 text-sm">
+          <h1 className="font-bold text-2xl">Hi, I am {p.name}</h1>
+          <p className="font-thin dark:text-zinc-300 text-md">
             {p.roles.map((role, idx) => (
               <span key={idx}>
                 <span className="font-bold text-sky-700 dark:text-sky-400">
@@ -47,7 +29,7 @@ const Profile = () => {
             ))}
             , {p.description}
           </p>
-          <p className="mt-3 font-thin dark:text-zinc-300 text-sm">
+          <p className="mt-3 font-thin dark:text-zinc-300 text-md">
             {p.location}
           </p>
           <span

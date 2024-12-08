@@ -1,4 +1,3 @@
-import pfp from "@/assets/img.jpg";
 export const profileData = {
   name: "Kapil Kumar Jangid",
   roles: ["Open Source Contributor", "Full Stack Developer"],
@@ -6,5 +5,4 @@ export const profileData = {
   description:
     "Specializing in UI design and creating engaging user experiences.",
   location: "Rajasthan, India",
-  image: pfp,
 };
