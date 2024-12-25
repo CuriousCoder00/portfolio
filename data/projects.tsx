@@ -9,7 +9,7 @@ export const projectData = [
   {
     name: "Percept UI",
     desc: "A comprehensive React component library designed to enhance your web applications with high-quality, accessible, and customizable UI components.",
-    link: "https://perceptui.vercel.app/",
+    link: "https://perceptui.codebrise.tech/",
     repo: "https://github.com/perceptui/ui",
     imageLight: PERCEPTUI,
     imageDark: PERCEPTUI,
