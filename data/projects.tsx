@@ -4,6 +4,7 @@ import SAFECRYPT from "../assets/safecrypt.png";
 import GRIDCONNECT from "../assets/gridc.png";
 import GRIDCONNECT_LIGHT from "../assets/gridc-light.png";
 import BRAINLY_LIGHT from "../assets/brainly-light.png";
+import URL_SHORTNER from "../assets/url-shortner.png";
 
 export const projectData = [
   {
@@ -40,6 +41,15 @@ export const projectData = [
       "zod",
       "react-hook-forms",
     ],
+  },
+  {
+    name: "Url Shortner",
+    desc: "A simple and easy to use URL shortner. Shorten your long URLs with ease and share them with your friends.",
+    link: "https://shorturlmaker.vercel.app/",
+    repo: "https://github.com/CuriousCoder00/url-shortner",
+    imageLight: URL_SHORTNER,
+    imageDark: URL_SHORTNER,
+    tech: ["nextjs", "tailwindcss", "typescript", "shadcn","postgres","prisma"],
   },
   {
     name: "SafeCrypt Sol",
