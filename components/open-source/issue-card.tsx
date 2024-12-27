@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Labels } from "./labels";
 import { getTimeAgo } from "@/lib/utils";
 import { Reactions } from "./reactions";
-import Image from "next/image";
 
 interface IssueCardProps {
   issue: GithubIssueResponse;
