@@ -61,7 +61,7 @@ export const projectData = [
     name: "AI Auto Commit",
     desc: "AI Auto Commit is a developer productivity extension for Visual Studio Code that generates meaningful and concise Git commit messages using AI via scanning changes with simple-git.",
     link: "https://marketplace.visualstudio.com/items?itemName=kjxcodez.rune",
-    repo: "",
+    repo: "https://github.com/CuriousCoder00/ai-commitbot",
     imageLight: AI_AUTO_COMMIT,
     imageDark: AI_AUTO_COMMIT,
     tech: [
