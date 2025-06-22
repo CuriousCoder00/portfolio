@@ -15,7 +15,9 @@ const Projects = () => {
       <h2 className="font-semibold text-sm">RECENT PROJECTS</h2>
       <div className="grid sm:grid-cols-2 grid-cols-1 flex-wrap w-full gap-3">
         {projectData.map((project, idx) => (
-          <ProjectCard project={project} key={idx} />
+          <Link href={`/project/${project.id}`} key={idx}>
+            <ProjectCard project={project} />
+          </Link>
         ))}
       </div>
       <div className="flex w-full items-center justify-end gap-3">
@@ -49,7 +51,7 @@ const ProjectCard = ({
 }) => {
   const theme = useRecoilValue(themeState);
   return (
-    <div className="flex flex-col col-span-1 overflow-hidden rounded-xl border w-full backdrop-blur-xl">
+    <div className="flex flex-col col-span-1 overflow-hidden rounded-xl border w-full h-full backdrop-blur-xl">
       {theme === "dark" ? (
         <Image
           src={project.imageDark}
@@ -84,7 +86,11 @@ const ProjectCard = ({
             </div>
           )}
         </div>
-        <p className="opacity-80 text-sm">{project.desc}</p>
+        <p className="opacity-80 text-sm">
+          {project.desc.length > 200
+            ? project.desc.slice(0, 200) + "..."
+            : project.desc}
+        </p>
         <div className="flex items-center justify-start gap-3 w-full flex-wrap my-3">
           {project.tech.map((technology, idx) => (
             <Badge key={idx}>{technology}</Badge>
