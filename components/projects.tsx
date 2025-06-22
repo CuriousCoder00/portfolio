@@ -15,9 +15,7 @@ const Projects = () => {
       <h2 className="font-semibold text-sm">RECENT PROJECTS</h2>
       <div className="grid sm:grid-cols-2 grid-cols-1 flex-wrap w-full gap-3">
         {projectData.map((project, idx) => (
-          <Link href={`/project/${project.id}`} key={idx}>
-            <ProjectCard project={project} />
-          </Link>
+          <ProjectCard key={idx} project={project} />
         ))}
       </div>
       <div className="flex w-full items-center justify-end gap-3">
