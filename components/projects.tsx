@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { projectData } from "@/data/projects";
 import Image, { StaticImageData } from "next/image";
@@ -40,7 +40,7 @@ const ProjectCard = ({
     name: string;
     desc: string;
     link: string;
-    repo: string;
+    repo?: string;
     imageDark: StaticImageData;
     imageLight: StaticImageData;
     tech: string[];
@@ -76,9 +76,11 @@ const ProjectCard = ({
               <Link href={project.link} target="_blank">
                 <SquareArrowOutUpRight size={18} />
               </Link>
-              <Link href={project.repo} target="_blank">
-                <DiGithubBadge size={25} />
-              </Link>
+              {project.repo && (
+                <Link href={project.repo} target="_blank">
+                  <DiGithubBadge size={25} />
+                </Link>
+              )}
             </div>
           )}
         </div>
