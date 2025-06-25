@@ -22,7 +22,7 @@ const Projects = () => {
         You can find more projects on
         <Link
           className="flex items-center justify-end gap-3 hover:underline text-sky-500"
-          href="https://github.com/curiouscoder00?tab=repositories"
+          href="https://github.com/kjxcodez?tab=repositories"
         >
           My Github <SquareArrowOutUpRight size={18} />
         </Link>

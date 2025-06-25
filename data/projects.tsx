@@ -65,7 +65,7 @@ export const projectData = [
     name: "AI Auto Commit",
     desc: "AI Auto Commit is a developer productivity extension for Visual Studio Code that generates meaningful and concise Git commit messages using AI via scanning changes with simple-git.",
     link: "https://marketplace.visualstudio.com/items?itemName=kjxcodez.rune",
-    repo: "https://github.com/CuriousCoder00/ai-commitbot",
+    repo: "https://github.com/kjxcodez/ai-commitbot",
     imageLight: AI_AUTO_COMMIT,
     imageDark: AI_AUTO_COMMIT,
     tech: [
@@ -84,7 +84,7 @@ export const projectData = [
     name: "Brainly",
     desc: "A second brain to manage your important links and docs. Store organize and access your important content with ease.",
     link: "https://brainlyv1.vercel.app/",
-    repo: "https://github.com/CuriousCoder00/brainly",
+    repo: "https://github.com/kjxcodez/brainly",
     imageLight: BRAINLY_LIGHT,
     imageDark: BRAINLY,
     tech: [
@@ -103,7 +103,7 @@ export const projectData = [
     name: "Url Shortner",
     desc: "A simple and easy to use URL shortner. Shorten your long URLs with ease and share them with your friends.",
     link: "https://shorturlmaker.vercel.app/",
-    repo: "https://github.com/CuriousCoder00/url-shortner",
+    repo: "https://github.com/kjxcodez/url-shortner",
     imageLight: URL_SHORTNER,
     imageDark: URL_SHORTNER,
     tech: [
